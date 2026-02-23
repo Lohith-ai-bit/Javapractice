@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile and run",
+            "type": "shell",
+            "command": "javac index.java && java index < input.txt > output.txt",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/d", "/c"]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$javac",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",   // 👈 don’t pop up terminal unless error
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        }
+    ]
+}
